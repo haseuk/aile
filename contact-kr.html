@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pc.css">
+  <title>Aile Company</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap scr-dwn">
+
+      <!--####### 헤더 #######-->
+      <header>
+        <h1><a href="home-kr.html"></a></h1>
+        <a class="menu-btn">
+          <span class="menu"></span>
+        </a>
+        <a href="" class="ins-btn web"></a>
+      </header>
+      <div class="menu-wrap">
+        <div class="menu-inner">
+          <ul class="depth1">
+            <li><a href="home-kr.html">ABOUT</a></li>
+            <li>
+              <a href="models-depth1-kr.html">MODELS</a>
+              <ul class="depth2">
+                <li><a href="models-female-kr.html">WOMEN</a></li>
+                <li><a href="models-male-kr.html">MEN</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="artists-depth1-kr.html">ARTISTS</a>
+              <ul class="depth2">
+                <li><a href="artists-actors-kr.html">ACTORS</a></li>
+                <li><a href="artists-enter-kr.html">ENTERTAINERS</a></li>
+              </ul>
+            </li>
+            <li><a href="xr-kr.html">STAGE AILE</a></li>
+            <li><a href="videos-kr.html">VIDEO</a></li>
+            <li><a href="now-kr.html">AILE NOW</a></li>
+            <li><a href="contact-kr.html">CONTACT</a></li>
+          </ul>
+          <div class="m-bottom">
+            <a href="" class="ins mo"></a>
+            <div class="lang-wrap">
+              <a class="on">KR</a>
+              <a>EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--####### 헤더 끝 #######-->
+
+
+      <article>
+        <section class="contact">
+          <div class="map" id="map">
+            <img src="img/mo/map.png" alt="" class="mo">
+            <img src="img/pc/map.png" alt="" class="web">
+          </div>
+          <div class="cont-wrap">
+            <p class="tit">CONTACT US</p>
+            <p class="txt">무료 컨설팅을 위해서 메시지를 보내주시면<br> 최대한 빠른 시간내로 답변을 드리겠습니다.</p>
+
+
+            <!--  info-wrap클래스에 chk-agree붙으면 문의하기 없어지고 수집 동의해 주세요 메시지 뜸-->
+            <div class="info-wrap kr-info ">
+              <!-- <div class="info-wrap chk-agree">-->
+              <form action="">
+                <div class="cont cont1 err">
+                  <s>*</s>
+                  <input type="text" placeholder="이름" onkeydown="titHide(this)">
+                  <span>필수 입력 항목입니다.</span>
+                </div>
+                <div class="cont cont1 cont2">
+                  <s>*</s>
+                  <input type="text"  placeholder="이메일 주소" onkeydown="titHide(this)">
+                  <span>필수 입력 항목입니다.</span>
+                </div>
+                <div class="cont">
+                  <input type="number" placeholder="전화번호">
+                  <span>전화번호를 입력해주세요.</span>
+                </div>
+                <div class="cont">
+                  <textarea placeholder="메시지"></textarea>
+                  <span>내용을 입력해주세요.</span>
+                </div>
+              </form>
+              <label>
+                <input type="checkbox">
+                <i></i>
+                <s>개인정보 수집에 동의합니다.</s>
+              </label>
+              <a class="submit">문의하기</a>
+              <a class="agree-chk">개인정보 수집에 동의해 주시기 바랍니다.</a>
+            </div>
+          </div>
+          <div class="co-info">
+            <p><s>Address.</s> 4, Seolleung-ro 135-gil, Gangnam-gu, Seoul, KOREA</p>
+            <p><s>Tel.</s> 02.3443.0504</p>
+            <p><s>Fax.</s> 02.6442.5590</p>
+            <p><s>Email.</s> aile@ailecompany.com</p>
+          </div>
+          <p class="bg-txt web"><img src="img/pc/CONTACT.svg" alt=""></p>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script>
+    function titHide(e) {
+      e.parentNode.classList.add('t-hide');
+    }
+  </script>
+</body>
+</html>

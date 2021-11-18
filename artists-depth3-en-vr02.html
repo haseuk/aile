@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pc.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>Aile Company</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap scr-dwn">
+
+      <!--####### 헤더 #######-->
+      <header>
+        <h1><a href="home-en.html"></a></h1>
+        <a class="menu-btn">
+          <span class="menu"></span>
+        </a>
+        <a href="" class="ins-btn web"></a>
+      </header>
+      <div class="menu-wrap">
+        <div class="menu-inner">
+          <ul class="depth1">
+            <li><a href="home-en.html">ABOUT</a></li>
+            <li>
+              <a href="models-depth1-en.html">MODELS</a>
+              <ul class="depth2">
+                <li><a href="models-female-en.html">WOMEN</a></li>
+                <li><a href="models-male-en.html">MEN</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="artists-depth1-en.html">ARTISTS</a>
+              <ul class="depth2">
+                <li><a href="artists-actors-en.html">ACTORS</a></li>
+                <li><a href="artists-enter-en.html">ENTERTAINERS</a></li>
+              </ul>
+            </li>
+            <li><a href="xr-en.html">STAGE AILE</a></li>
+            <li><a href="videos-en.html">VIDEO</a></li>
+            <li><a href="now-en.html">AILE NOW</a></li>
+            <li><a href="contact-en.html">CONTACT</a></li>
+          </ul>
+          <div class="m-bottom">
+            <a href="" class="ins mo"></a>
+            <div class="lang-wrap">
+              <a>KR</a>
+              <a class="on">EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--####### 헤더 끝 #######-->
+
+
+      <article class="depth3 artist-depth3">
+        <section class="visual">
+          <div class="profile">
+            <h2 class="md-name">CHOI ARA</h2>
+          </div>
+
+          <div class="swiper mySwiper visual-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/pc/art-chr-131.png" alt="" class="web">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/pc/art-chr-132.png" alt="" class="web">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/pc/art-chr-133.png" alt="" class="web">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/pc/art-chr-133.png" alt="" class="web">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/pc/art-chr-133.png" alt="" class="web">
+              </div>
+            </div>
+          </div>
+          <div class="history">
+            <div class="h-wrap">
+              <p class="tit">DRAMA</p>
+              <div class="txt">
+                <p>청춘시대 시즌2(Jtbc, 2019)</p>
+              </div>
+            </div>
+
+            <div class="h-wrap">
+              <p class="tit">MUSIC VIDEO</p>
+              <div class="txt">
+                <p>언노운드레스 '유성'(2015)</p>
+                <p>8eight '이별이 온다'(2010)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var depth3 = new Swiper(".depth3 .mySwiper", {
+      slidesPerView:1.13,
+      spaceBetween: 0,
+      breakpoints: {
+        801: {
+          slidesPerView:'auto',
+          loop:true,
+        }
+      },
+    });
+  </script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
