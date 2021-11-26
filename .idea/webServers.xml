@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="79a4e4bf-cc1f-4873-920f-9ec1c37c0cbb" name="aile" url="http://aile.devcraft.kr">
+        <fileTransfer rootFolder="/var/www/aile" accessType="SFTP" host="devcraft.kr" port="22" sshConfigId="c60c28f5-b397-4923-90c3-818ec6c649fa" sshConfig="root@devcraft.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
