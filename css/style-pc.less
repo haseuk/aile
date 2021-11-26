@@ -19,12 +19,14 @@ html { font-size: 18px; font-family: Pretendard, sans-serif; scroll-behavior: sm
   .web { .ib; }
 
   .container { .min-w(1470); .mh-c;
+    //&.home-cont { .fix; }
+
     .wrap { overflow: hidden;
       // ###### 헤더
       &.scr-dwn {
         header { background: rgba(255,255,255,1); .max-h(975);
           h1 a { .contain('../img/pc/logo-b.svg'); }
-          .menu-btn .menu { .contain('../img/pc/ico-ham-b.svg'); }
+          .menu-btn span { .bgc(#000); }
           .ins-btn { .contain('../img/pc/ico-ins-b.svg'); }
         }
         .menu-wrap { .max-h(975); }
@@ -34,15 +36,24 @@ html { font-size: 18px; font-family: Pretendard, sans-serif; scroll-behavior: sm
         h1 { .wf; .abs; .lt(0,50%); transform: translateY(-50%); z-index: 5; .tc;
           a { .contain('../img/pc/logo-w.svg'); .wh(30,102); }
         }
-        .menu-btn { .abs; .wh(100%,22); .mt(60); .tc; z-index: 5;
-          .menu { .contain('../img/pc/ico-ham-w.svg'); .wh(30,22); .ib; pointer-events: none; }
+        .menu-btn { .abs; .wh(100%,22); .mt(60); .tc; z-index: 5; transform: rotate(0deg); transition: .5s ease-in-out; .pointer;
+          span { .wh(30,2); .bgc(#fff); .block; .mh-c; .abs; .l(61); opacity: 1; transform: rotate(0deg); transition: .25s ease-in-out; transform-origin: left center; pointer-events: none;
+            &:nth-child(1) { .t(0); }
+            &:nth-child(2) { .t(10); }
+            &:nth-child(3) { .t(20); }
+          }
+          //.menu { .contain('../img/pc/ico-ham-w.svg'); .wh(30,22); .ib; pointer-events: none; }
         }
         .ins-btn { .wh(28,28); .contain('../img/pc/ico-ins-w.svg'); .abs; .lb(50%,60); .ml(-14); }
 
         &.open { background: rgba(255,255,255,1); .-r(#dedede);
           h1 a { .contain('../img/pc/logo-b.svg'); }
           .menu-btn {
-            .menu { .contain('../img/pc/ico-x.svg'); .wh(30,23); }
+            span { .bgc(#000);
+              &:nth-child(1) { transform: rotate(45deg); .lt(66,-3); }
+              &:nth-child(2) { .w(0); opacity: 0; }
+              &:nth-child(3) { transform: rotate(-45deg); .lt(66,19); }
+            }
           }
           .ins-btn { .contain('../img/pc/ico-ins-b.svg'); }
         }
@@ -75,20 +86,28 @@ html { font-size: 18px; font-family: Pretendard, sans-serif; scroll-behavior: sm
       }
       nav { .w(520); .abs; .lt(50%,60); .ml(49); z-index: 2;
         ul { .fs(0);
-          li { .fs(18); .lh(23.4); .ls(-0.01em); .medium; .f-col; .tl; .ib; .vam; .mr(40);
+          li { .fs(18); .lh(23.4); .ls(-0.01em); .medium; .f-col; .tl; .ib; .vam; .mr(40); .rel;
+            &:after { .cnt; .wh(100%,2); .g-bg-col; .abs; .lb(-100%,-5); opacity: 0; transition: all 0.1s; }
             a { .f; }
             &:last-child { .mr(0); }
+            &:hover:after { .cnt; .wh(100%,2); .g-bg-col; .abs; .lb(0,-5); opacity: 1; }
           }
         }
       }
       // ###### 헤더 -------------end
 
       article {
+        // ###### 스플래쉬 -------------
+        .splash { .wh(130%,130%); .bgc(#007481); .fix; .lt(50%,50%); transform: translate(-50%,-50%); z-index: 30; transition: opacity 0.5s;
+          video { .wf; .abs; .lt(50%,50%); transform: translate(-50%,-50%);  z-index: 30; }
+          &.out { opacity: 0; }
+        }
+
         .sec-wrap.active { .fix; .lt; .w(100vw); }
         section { .p(150,0); .-box; .rel; .bgc(#fff);
           h2 { .fs(40); .lh(44); .black; .mb(20); }
-          .txt { .fs(24); .lh(33.6); .ls(-0.01em); .light; .mb(24); }
-          .go-btn { .fs(18); .lh(23.4); .ls(-0.01em); .medium;
+          .txt { .fs(21.2); .lh(30); .ls(-0.01em); .light; .mb(24); }
+          .go-btn { .fs(20); .lh(23.4); .ls(-0.01em); .medium;
             img { .wh(26,13); .ml(3); pointer-events: none; }
             &:hover img { .ml(23); transition: margin-left 0.2s; }
           }
@@ -100,7 +119,9 @@ html { font-size: 18px; font-family: Pretendard, sans-serif; scroll-behavior: sm
               .imagin { .fs(50); .lh(50); .f-col; .pl(7); .light; }
               .com, .stage-aile { transition: 0.3s; }
             }
-            .down { .contain('../img/pc/ico-scr-w.svg'); .wh(100,100); .abs; .lb(243,60); z-index: 2; }
+            .down { .contain('../img/pc/ico-scr-w.svg'); .wh(100,100); .abs; .lb(243,60); z-index: 2;
+              &:hover { .contain('../img/pc/ico-scr-g.svg'); }
+            }
             .dim { .f; .abs; .lt; .bgc(#000); opacity: 0.7; z-index: 1;}
             .vid { .abs; .lt(50%,0); transform:translateX(-50%); .wf; opacity: 0; transition: opacity 0.2s; }
 
@@ -169,7 +190,7 @@ html { font-size: 18px; font-family: Pretendard, sans-serif; scroll-behavior: sm
             h2 { .fs(60); .lh(66); .mb(20);
               s { .g-col; }
             }
-            .txt { .fs(20); .lh(33.6); .ls(-0.01em); .mb(83); }
+            .txt { .fs(21.2); .lh(30); .ls(-0.01em); .mb(83); }
             .stage-swiper {
               .swiper-wrapper {
                 .swiper-slide { .wh(1128,712);

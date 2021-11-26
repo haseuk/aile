@@ -49,10 +49,8 @@ html {
     background-image: url('../img/mo/logo-b.svg');
     background-size: contain;
   }
-  .container .wrap.scr-dwn header .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/mo/ico-ham-b.svg');
-    background-size: contain;
+  .container .wrap.scr-dwn header .menu-btn span {
+    background-color: #000;
   }
   .container .wrap header {
     width: 100%;
@@ -93,19 +91,33 @@ html {
     float: right;
     width: 16.66666667vw;
     height: 13.33333333vw;
-    padding-top: 5vw;
     box-sizing: border-box;
     text-align: center;
     z-index: 5;
   }
-  .container .wrap header .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/mo/ico-ham-w.svg');
-    background-size: contain;
+  .container .wrap header .menu-btn span {
     width: 5.55555556vw;
-    height: 3.33333333vw;
-    display: inline-block;
+    height: 0.27777778vw;
+    background-color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 5.55555556vw;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    transform-origin: left center;
     pointer-events: none;
+  }
+  .container .wrap header .menu-btn span:nth-child(1) {
+    top: 5vw;
+  }
+  .container .wrap header .menu-btn span:nth-child(2) {
+    top: 6.66666667vw;
+  }
+  .container .wrap header .menu-btn span:nth-child(3) {
+    top: 8.33333333vw;
   }
   .container .wrap header.open {
     background: #ffffff;
@@ -118,12 +130,26 @@ html {
   .container .wrap header.open .menu-btn {
     padding-top: 3.88888889vw;
   }
-  .container .wrap header.open .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/mo/ico-x.svg');
-    background-size: contain;
-    width: 5.55555556vw;
-    height: 5.55555556vw;
+  .container .wrap header.open .menu-btn span {
+    background-color: #000;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(1) {
+    transform: rotate(45deg);
+    right: 5.55555556vw;
+    top: 4.72222222vw;
+    left: auto;
+    bottom: auto;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(2) {
+    width: 0vw;
+    opacity: 0;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg);
+    right: 5.55555556vw;
+    top: 8.61111111vw;
+    left: auto;
+    bottom: auto;
   }
   .container .wrap .menu-wrap {
     text-align: left;

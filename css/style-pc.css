@@ -56,10 +56,8 @@ html {
     background-image: url('../img/pc/logo-b.svg');
     background-size: contain;
   }
-  .container .wrap.scr-dwn header .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/pc/ico-ham-b.svg');
-    background-size: contain;
+  .container .wrap.scr-dwn header .menu-btn span {
+    background-color: #000;
   }
   .container .wrap.scr-dwn header .ins-btn {
     background-repeat: no-repeat;
@@ -110,15 +108,33 @@ html {
     margin-top: 3.125vw;
     text-align: center;
     z-index: 5;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
   }
-  .container .wrap header .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/pc/ico-ham-w.svg');
-    background-size: contain;
+  .container .wrap header .menu-btn span {
     width: 1.5625vw;
-    height: 1.14583333vw;
-    display: inline-block;
+    height: 0.10416667vw;
+    background-color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 3.17708333vw;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    transform-origin: left center;
     pointer-events: none;
+  }
+  .container .wrap header .menu-btn span:nth-child(1) {
+    top: 0vw;
+  }
+  .container .wrap header .menu-btn span:nth-child(2) {
+    top: 0.52083333vw;
+  }
+  .container .wrap header .menu-btn span:nth-child(3) {
+    top: 1.04166667vw;
   }
   .container .wrap header .ins-btn {
     width: 1.45833333vw;
@@ -142,12 +158,26 @@ html {
     background-image: url('../img/pc/logo-b.svg');
     background-size: contain;
   }
-  .container .wrap header.open .menu-btn .menu {
-    background-repeat: no-repeat;
-    background-image: url('../img/pc/ico-x.svg');
-    background-size: contain;
-    width: 1.5625vw;
-    height: 1.19791667vw;
+  .container .wrap header.open .menu-btn span {
+    background-color: #000;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(1) {
+    transform: rotate(45deg);
+    left: 3.4375vw;
+    top: -0.15625vw;
+    right: auto;
+    bottom: auto;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(2) {
+    width: 0vw;
+    opacity: 0;
+  }
+  .container .wrap header.open .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg);
+    left: 3.4375vw;
+    top: 0.98958333vw;
+    right: auto;
+    bottom: auto;
   }
   .container .wrap header.open .ins-btn {
     background-repeat: no-repeat;
@@ -265,6 +295,21 @@ html {
     display: inline-block;
     vertical-align: middle;
     margin-right: 2.08333333vw;
+    position: relative;
+  }
+  .container .wrap nav ul li:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.10416667vw;
+    background-color: #007481;
+    position: absolute;
+    left: -100%;
+    bottom: -0.26041667vw;
+    right: auto;
+    top: auto;
+    opacity: 0;
+    transition: all 0.1s;
   }
   .container .wrap nav ul li a {
     width: 100%;
@@ -272,6 +317,45 @@ html {
   }
   .container .wrap nav ul li:last-child {
     margin-right: 0vw;
+  }
+  .container .wrap nav ul li:hover:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.10416667vw;
+    background-color: #007481;
+    position: absolute;
+    left: 0vw;
+    bottom: -0.26041667vw;
+    right: auto;
+    top: auto;
+    opacity: 1;
+  }
+  .container .wrap article .splash {
+    width: 130%;
+    height: 130%;
+    background-color: #007481;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: opacity 0.5s;
+  }
+  .container .wrap article .splash video {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+  }
+  .container .wrap article .splash.out {
+    opacity: 0;
   }
   .container .wrap article .sec-wrap.active {
     position: fixed;
@@ -297,14 +381,14 @@ html {
     margin-bottom: 1.04166667vw;
   }
   .container .wrap article section .txt {
-    font-size: 1.25vw;
-    line-height: 1.75vw;
+    font-size: 1.10416667vw;
+    line-height: 1.5625vw;
     letter-spacing: -0.01em;
     font-weight: 300;
     margin-bottom: 1.25vw;
   }
   .container .wrap article section .go-btn {
-    font-size: 0.9375vw;
+    font-size: 1.04166667vw;
     line-height: 1.21875vw;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -360,6 +444,11 @@ html {
     right: auto;
     top: auto;
     z-index: 2;
+  }
+  .container .wrap article section.visual .down:hover {
+    background-repeat: no-repeat;
+    background-image: url('../img/pc/ico-scr-g.svg');
+    background-size: contain;
   }
   .container .wrap article section.visual .dim {
     width: 100%;
@@ -546,8 +635,8 @@ html {
     color: #007481;
   }
   .container .wrap article section.stage .txt {
-    font-size: 1.04166667vw;
-    line-height: 1.75vw;
+    font-size: 1.10416667vw;
+    line-height: 1.5625vw;
     letter-spacing: -0.01em;
     margin-bottom: 4.32291667vw;
   }

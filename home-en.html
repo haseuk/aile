@@ -9,15 +9,21 @@
   <link rel="stylesheet" href="css/style-pc.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Aile Company</title>
+  <style>
+    ::selection { color:#007481; }
+    ::-moz-selection { color:#007481; }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container home-cont">
     <div class="wrap">
       <!--####### 헤더 #######-->
       <header>
         <h1><a href="home-en.html"></a></h1>
         <a class="menu-btn">
-          <span class="menu"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </a>
         <a href="" class="ins-btn web"></a>
       </header>
@@ -65,6 +71,11 @@
       <!--####### 헤더 끝 #######-->
 
       <article>
+<!--        <div class="splash">-->
+<!--          <video muted autoplay class="web">-->
+<!--            <source src="img/pc/01_splashScreenVid.mp4">-->
+<!--          </video>-->
+<!--        </div>-->
         <section class="visual hv1">
           <div class="v-inner">
             <p class="imagin">IMAGINATION TO REALITY</p>
@@ -73,13 +84,13 @@
           </div>
           <a href="#models" class="down"></a>
           <div class="dim"></div>
-          <video class="vid mo" muted autoplay>
+          <video class="vid mo" muted loop>
             <source src="img/mo/01_MainBG.mp4" type="video/mp4">
           </video>
-          <video class="vid vid1 web" muted autoplay>
+          <video class="vid vid1 web" muted loop>
             <source src="img/pc/01_MainBG.mp4" type="video/mp4">
           </video>
-          <video class="vid vid2 web" muted autoplay>
+          <video class="vid vid2 web" muted autoplay loop>
             <source src="img/pc/01_MainBG_version02_1.mp4" type="video/mp4">
           </video>
         </section>
@@ -157,25 +168,6 @@
         },
       });
     }
-    // if(wi < 800) {
-    //   let models = new Swiper(".models .mySwiper", {
-    //     pagination: {
-    //       el: ".swiper-pagination",
-    //     },
-    //     breakpoints: {
-    //       800: {
-    //         direction: 'vertical',
-    //         slidesPerView: 2,
-    //         grid: {
-    //           rows: 2,
-    //         },
-    //         autoplay: {
-    //           delay: 800,
-    //         }
-    //       },
-    //     }
-    //   });
-    // }
 
     var artists = new Swiper(".artists .mySwiper", {
       loop:true,
@@ -234,7 +226,27 @@
       visual.classList.add('hv1');
     });
 
-
+    // let container = document.querySelector('.container');
+    // let splash = document.querySelector('.splash');
+    // function splOut() {
+    //   setTimeout(function() {
+    //     splash.classList.add('out');
+    //     displayNone();
+    //   },2500);
+    // }
+    // splOut();
+    // function displayNone() {
+    //   container.style.position = 'static';
+    //   setTimeout(function() {
+    //     splash.style.display = 'none';
+    //     vid1Play();
+    //   },500);
+    // }
+    //
+    // let vid1 = document.querySelector('.vid1');
+    // function vid1Play() {
+    //   vid1.play();
+    // }
 
     // let modelSec = document.querySelector('.models');
     // let listWrap = document.querySelector('.models-swiper');
