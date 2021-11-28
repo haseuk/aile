@@ -80,11 +80,14 @@
           </div>
           <div class="v-inner">
             <p><s>PASSION<br class="mo"> IN ACTION</s><br> AILE ARTISTS</p>
-            <p>Our artists continue to pioneer<br> the diverse world of art</p>
-            <p>Our artists continue to pioneer the diverse world of art<br> as actors and entertainors, professing their passion and talents.</p>
+            <p class="mo">Our artists continue to pioneer<br> the diverse world of art</p>
+            <p class="web">Our artists continue to pioneer the diverse world of art<br> as actors and entertainors, professing their passion and talents.</p>
           </div>
           <div class="marquee vis web">
-            <p class=" txt">ART OF AILE</p>
+            <div>
+              <p class="txt">ART OF AILE</p>
+              <p class="txt">ART OF AILE</p>
+            </div>
           </div>
         </section>
         <section class="model-sec actors">
@@ -170,10 +173,16 @@
           </ul>
         </section>
         <div class="marquee act web">
-          <p class=" txt">ACTORS</p>
+          <div>
+            <p class=" txt">ACTORS</p>
+<!--            <p class=" txt">ACTORS</p>-->
+          </div>
         </div>
         <div class="marquee ent web">
-          <p class=" txt">ENTERTAINORS</p>
+          <div>
+            <p class=" txt">ENTERTAINORS</p>
+            <p class=" txt">ENTERTAINORS</p>
+          </div>
         </div>
       </article>
       <div class="bottom">
@@ -201,6 +210,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>

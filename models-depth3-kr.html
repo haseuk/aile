@@ -79,7 +79,7 @@
             <div class="swiper-pagination"></div>
           </div>
           <a href="videos-kr.html" class="go-btn video-go">VIDEOS <img src="img/mo/ico-go.svg" alt=""></a>
-          <a href="" class="go-btn ins-go">INSATGRAM <img src="img/mo/ico-go.svg" alt=""></a>
+          <a href="" class="go-btn ins-go">INSTAGRAM <img src="img/mo/ico-go.svg" alt=""></a>
         </section>
         <section class="photo-book">
           <ul>
@@ -243,6 +243,12 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var depth3 = new Swiper(".depth3 .mySwiper", {
+      speed: 800,
+      loop:true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction:false,
+      },
       pagination: {
         el: ".swiper-pagination",
       },
@@ -251,11 +257,23 @@
   <script src="js/nav.js"></script>
   <script>
     let photoClick = document.querySelectorAll('.photo-book a');
+    let photoList = document.querySelectorAll('.photo-book li');
     let imgSrc;
     photoClick.forEach(function(item) {
       item.addEventListener('click', function(e) {
-        imgSrc = e.target.src;
-        changeImg(imgSrc);
+        let winWidth = window.innerWidth;
+        if(winWidth > 800) {
+          imgSrc = e.target.children[1].src;
+          return changeImg(imgSrc);
+
+        } else {
+          for (let i = 0; i < photoList.length; i++) {
+            photoList[i].classList.remove('on');
+          }
+          e.currentTarget.parentNode.classList.add('on');
+          imgSrc = e.target.src;
+          return changeImg(imgSrc);
+        }
       });
     });
 

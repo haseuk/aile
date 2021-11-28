@@ -71,11 +71,14 @@
       <!--####### 헤더 끝 #######-->
 
       <article>
-<!--        <div class="splash">-->
-<!--          <video muted autoplay class="web">-->
-<!--            <source src="img/pc/01_splashScreenVid.mp4">-->
-<!--          </video>-->
-<!--        </div>-->
+        <div class="splash">
+          <video muted autoplay class="web">
+            <source src="img/pc/01_splashScreenVid.mp4">
+          </video>
+          <video muted autoplay class="mo">
+            <source src="img/mo/02_splashScreenVid_mobile.mp4">
+          </video>
+        </div>
         <section class="visual hv1">
           <div class="v-inner">
             <p class="imagin">IMAGINATION TO REALITY</p>
@@ -122,6 +125,8 @@
               <div class="swiper-slide"><img src="img/mo/home-4.png" alt=""></div>
               <div class="swiper-slide"><img src="img/mo/home-5.png" alt=""></div>
               <div class="swiper-slide"><img src="img/mo/home-6.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/mo/home-6.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/mo/home-6.png" alt=""></div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -163,6 +168,12 @@
     let wi = window.innerWidth;
     if(wi < 800) {
       let models = new Swiper(".models .mySwiper", {
+        speed: 3000,
+        loop:true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction:false,
+        },
         pagination: {
           el: ".swiper-pagination",
         },
@@ -170,19 +181,18 @@
     }
 
     var artists = new Swiper(".artists .mySwiper", {
+      freeMode: true,
+      speed: 3000,
       loop:true,
-      speed: 800,
       autoplay: {
-        delay: 2000,
+        delay: 0,
         disableOnInteraction:false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
       },
       breakpoints: {
         801: {
           slidesPerView: 'auto',
-          spaceBetween: 20
+          spaceBetween: 20,
+          speed: 2500,
         }
       },
     });
@@ -226,27 +236,29 @@
       visual.classList.add('hv1');
     });
 
-    // let container = document.querySelector('.container');
-    // let splash = document.querySelector('.splash');
-    // function splOut() {
-    //   setTimeout(function() {
-    //     splash.classList.add('out');
-    //     displayNone();
-    //   },2500);
-    // }
-    // splOut();
-    // function displayNone() {
-    //   container.style.position = 'static';
-    //   setTimeout(function() {
-    //     splash.style.display = 'none';
-    //     vid1Play();
-    //   },500);
-    // }
-    //
-    // let vid1 = document.querySelector('.vid1');
-    // function vid1Play() {
-    //   vid1.play();
-    // }
+    let container = document.querySelector('.container');
+    let splash = document.querySelector('.splash');
+    function splOut() {
+      setTimeout(function() {
+        splash.classList.add('out');
+        displayNone();
+      },2500);
+    }
+    splOut();
+    function displayNone() {
+      container.style.position = 'static';
+      setTimeout(function() {
+        splash.style.display = 'none';
+        vid1Play();
+      },500);
+    }
+
+    let vid = document.querySelector('.vid');
+    let vid1 = document.querySelector('.vid1');
+    function vid1Play() {
+      vid.play();
+      vid1.play();
+    }
 
     // let modelSec = document.querySelector('.models');
     // let listWrap = document.querySelector('.models-swiper');

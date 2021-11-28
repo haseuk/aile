@@ -79,11 +79,14 @@
             <div class="swiper-pagination"></div>
           </div>
           <div class="v-inner">
-            <p><s>PASSION<br> IN ACTION</s><br> AILE ARTISTS</p>
+            <p><s>PASSION<br class="mo"> IN ACTION</s><br> AILE ARTISTS</p>
             <p>우리의 아티스트들은 배우와 엔터테이너로서 다양한<br> 예술의 세계를 개척하고 있습니다.</p>
           </div>
           <div class="marquee vis web">
-            <p class=" txt">ART OF AILE</p>
+            <div>
+              <p class="txt">ART OF AILE</p>
+              <p class="txt">ART OF AILE</p>
+            </div>
           </div>
         </section>
         <section class="model-sec actors">
@@ -169,10 +172,16 @@
           </ul>
         </section>
         <div class="marquee act web">
-          <p class=" txt">ACTORS</p>
+          <div>
+            <p class=" txt">ACTORS</p>
+<!--            <p class=" txt">ACTORS</p>-->
+          </div>
         </div>
         <div class="marquee ent web">
-          <p class=" txt">ENTERTAINORS</p>
+          <div>
+            <p class=" txt">ENTERTAINORS</p>
+            <p class=" txt">ENTERTAINORS</p>
+          </div>
         </div>
       </article>
       <div class="bottom">
@@ -200,6 +209,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>

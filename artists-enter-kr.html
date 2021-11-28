@@ -61,10 +61,10 @@
 
       <article class="art-models actors-dep">
         <section class="visual">
-          <video class="vid mo" muted autoplay>
+          <video class="vid mo" muted autoplay loop>
             <source src="img/mo/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
-          <video class="vid web" muted autoplay>
+          <video class="vid web" muted autoplay loop>
             <source src="img/pc/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
         </section>
@@ -76,14 +76,14 @@
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/enter-1.png" alt="" class="mo">
                 <img src="img/pc/enter-1.png" alt="" class="web">
-                <p class="name">KIM WON JOONG</p>
+                <p class="name">KIM WON JOONG 김원중</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/enter-2.png" alt="" class="mo">
                 <img src="img/pc/enter-2.png" alt="" class="web">
-                <p class="name">MEGU</p>
+                <p class="name">MEGU 메구</p>
               </a>
             </li>
           </ul>
@@ -100,6 +100,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>

@@ -73,12 +73,12 @@
 <!--            <div class="info-wrap chk-agree">-->
               <form action="">
                 <div class="cont cont1">
-                  <s>*</s>
+<!--                  <s>*</s>-->
                   <input type="text" placeholder="Name" onkeydown="titHide(this)">
                   <span>Please enter your name.</span>
                 </div>
                 <div class="cont cont1 cont2">
-                  <s>*</s>
+<!--                  <s>*</s>-->
                   <input type="text" placeholder="E-mail" onkeydown="titHide(this)">
                   <span>Please enter your email address.</span>
                 </div>
@@ -113,10 +113,13 @@
   </div>
 
   <script src="js/nav.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
   <script>
     function titHide(e) {
       e.parentNode.classList.add('t-hide');
     }
+    autosize($("textArea"));
   </script>
 </body>
 </html>

@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="css/style-pc.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Aile Company</title>
+  <style>
+    ::-moz-selection {
+      background: #007481;
+    }
+    ::selection {
+      background: #007481;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -62,10 +70,10 @@
 
       <article class="art-models actors-dep">
         <section class="visual">
-          <video class="vid mo" muted autoplay>
+          <video class="vid mo" muted autoplay loop>
             <source src="img/mo/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
-          <video class="vid web" muted autoplay>
+          <video class="vid web" muted autoplay loop>
             <source src="img/pc/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
         </section>
@@ -77,56 +85,56 @@
               <a href="artists-depth3-kr-vr02.html">
                 <img src="img/mo/actor-1.png" alt="" class="mo">
                 <img src="img/pc/actor-63.png" alt="" class="web">
-                <p class="name">CHOI ARA</p>
+                <p class="name">CHOI ARA  최아라</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-2.png" alt="" class="mo">
                 <img src="img/pc/actor-64.png" alt="" class="web">
-                <p class="name">HYO IM</p>
+                <p class="name">HYO IM  효임</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-3.png" alt="" class="mo">
                 <img src="img/pc/actor-65.png" alt="" class="web">
-                <p class="name">CHA JU YEONG</p>
+                <p class="name">CHA JU YEONG  차주영</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-4.png" alt="" class="mo">
                 <img src="img/pc/actor-66.png" alt="" class="web">
-                <p class="name">KIM DA SOM</p>
+                <p class="name">KIM DA SOM  김다솜</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-5.png" alt="" class="mo">
                 <img src="img/pc/actor-67.png" alt="" class="web">
-                <p class="name">JUNG HA JOON</p>
+                <p class="name">JUNG HA JOON  정하준</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-6.png" alt="" class="mo">
                 <img src="img/pc/actor-68.png" alt="" class="web">
-                <p class="name">KIM SUN MIN</p>
+                <p class="name">KIM SUN MIN  김선민</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-7.png" alt="" class="mo">
                 <img src="img/pc/actor-69.png" alt="" class="web">
-                <p class="name">LIM JI SEOB</p>
+                <p class="name">LIM JI SEOB  임지섭</p>
               </a>
             </li>
             <li>
               <a href="artists-depth3-kr.html">
                 <img src="img/mo/actor-8.png" alt="" class="mo">
                 <img src="img/pc/actor-70.png" alt="" class="web">
-                <p class="name">KIM YOUNG JUN</p>
+                <p class="name">KIM YOUNG JUN  김영준</p>
               </a>
             </li>
           </ul>
@@ -143,6 +151,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>

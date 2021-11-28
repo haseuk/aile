@@ -46,7 +46,7 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
             span { .bgc(#000);
               &:nth-child(1) { transform: rotate(45deg); .rt(20,17); }
               &:nth-child(2) { .w(0); opacity: 0; }
-              &:nth-child(3) { transform: rotate(-45deg); .rt(20,31); }
+              &:nth-child(3) { transf&:hover { .contain('../img/pc/ico-scr-g.svg'); } transform: rotate(-45deg); .rt(20,31); }
             }
           }
         }
@@ -82,6 +82,11 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
       // ###### 헤더 -------------end
 
       article { z-index: 1; .bgc(#fff);
+        .splash { .w(100%); .bgc(#007481); .fix; .lt(50%,50%); transform: translate(-50%,-50%); z-index: 30; transition: opacity 0.5s;
+          video { .wf; .abs; .lt(50%,50%); transform: translate(-50%,-50%);  z-index: 30; }
+          &.out { opacity: 0; }
+        }
+
         section { .p(58,20,92); .-box;
           h2 { .fs(24); .lh(26.4); .black; .mb(4); }
           .txt { .fs(16); .lh(22.4); .ls(-0.015em); .light; .mb(20); }
@@ -98,7 +103,9 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
                 &:nth-child(3) { .fs(0); .contain('../img/mo/stage-aile.png'); .wh(222,30); .m(7,0,0,20); }
               }
             }
-            .down { .contain('../img/mo/ico-scr-w.svg'); .wh(70,70); .abs; .lt(20,50%); .mt(206); z-index: 2; }
+            .down { .contain('../img/mo/ico-scr-w.svg'); .wh(70,70); .abs; .lt(20,50%); .mt(206); z-index: 2;
+              &:hover { .contain('../img/pc/ico-scr-g.svg'); }
+            }
             .dim { .f; .abs; .lt; .bgc(#000); opacity: 0.7; z-index: 1;}
             .vid.mo { .abs; .lt; .wf; }
           }
@@ -117,8 +124,10 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
           &.artists { .pl(0); .pr(0);
             h2, .txt { .p(0,20); }
             .artists-swiper { .wh(100%,373); .mb(20);
-              .swiper-slide { .h(360);
-                img { .wf; }
+              .swiper-wrapper { -webkit-transition-timing-function:linear!important; -o-transition-timing-function:linear!important; transition-timing-function:linear!important;
+                .swiper-slide { .h(360);
+                  img { .wf; }
+                }
               }
               .swiper-pagination { .wh(100%,3); .tl; .abs; .p(0,20); .-box; .lb; .flex;
                 .swiper-pagination-bullet { .wh(100%,3); .bgc(#868686); .br(0); .m(0); .ib;
@@ -211,10 +220,13 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
         }
 
         .list { .fs(0);
-          li { .ib; .vam; .m(0,10,12,0);
+          li { .ib; .vam; .m(0,10,12,0); .rel;
             &:nth-child(even) { .mr(0); }
-            img { .wh(155,155); .mb(4); }
-            .name { .fs(12); .lh(15.6); .ls(-0.01em); .medium; }
+            &.on:after { .cnt; .wh(155,155); .abs; .lt; background: rgba(0, 116, 129, 0.5); }
+            a { .f;
+              img { .wh(155,155); .mb(4); }
+              .name { .fs(12); .lh(15.6); .ls(-0.01em); .medium; }
+            }
           }
         }
 
@@ -245,7 +257,8 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
             }
             .photo-book { .p(37,0,0);
               ul { .fs(0);
-                li { .ib; .vam; .m(0,8,8,0);
+                li { .ib; .vam; .m(0,8,8,0); .rel;
+                  &.on:after { .cnt; .wh(156,210); .abs; .lt; background: rgba(0, 116, 129, 0.5); }
                   img { .wh(156,210); }
                   &:nth-child(even) { .mr(0); }
                 }
@@ -299,6 +312,7 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
         .now { .p(20,20,60); .mt(48);
           .list {
             li { .rel;
+              &.on { background: rgba(0, 116, 129, 0.5); }
               img { .mb(0); }
               .prof { .abs; .lt; .g-bg-col; .f; .hide;
               }

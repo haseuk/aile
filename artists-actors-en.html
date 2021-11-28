@@ -69,10 +69,10 @@
 
       <article class="art-models actors-dep">
         <section class="visual">
-          <video class="vid mo" muted autoplay>
+          <video class="vid mo" muted autoplay loop>
             <source src="img/mo/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
-          <video class="vid web" muted autoplay>
+          <video class="vid web" muted autoplay loop>
             <source src="img/pc/02_ArtistsDepth02.mp4" type="video/mp4">
           </video>
         </section>
@@ -150,6 +150,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>
