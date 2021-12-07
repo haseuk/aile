@@ -1,17 +1,24 @@
 [
   {
-    "kwj":
+    "kangsy":
     {
-      "name": "ak",
-      "age": 30,
-      "hei": 390,
-      "photo": 10
+      "name": "KANG SO YOUNG",
+      "birth": 86,
+      "height": "179cm",
+      "waist": "3-size 32-24-34 inch",
+      "shoes": "260mm",
+      "vlink": "https://vimeo.com/252651829",
+      "insta": "https://www.instagram.com/iamsoyoung33/"
     },
-    "kwj2":
+    "parkhh":
     {
-      "name": "ak2",
-      "age": 302,
-      "hei": 3902
+      "name": "PARK HEE HYUN",
+      "birth": 89,
+      "height": "179cm",
+      "waist": "3-size 32-24-34 inch",
+      "shoes": "260mm",
+      "vlink": "https://www.youtube.com/watch?v=cRdfYXZ0aIM",
+      "insta": "https://www.instagram.com/kikikihyun/"
     }
   }
 ]
