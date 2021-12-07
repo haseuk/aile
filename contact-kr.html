@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-pc.css">
   <title>Aile Company</title>
+  <style>
+    ::-moz-selection {
+      color: #007481;
+    }
+    ::selection {
+      color: #007481;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -74,12 +83,12 @@
               <!-- <div class="info-wrap chk-agree">-->
               <form action="">
                 <div class="cont cont1 err">
-                  <s>*</s>
+<!--                  <s>*</s>-->
                   <input type="text" placeholder="이름" onkeydown="titHide(this)">
                   <span>필수 입력 항목입니다.</span>
                 </div>
                 <div class="cont cont1 cont2">
-                  <s>*</s>
+<!--                  <s>*</s>-->
                   <input type="text"  placeholder="이메일 주소" onkeydown="titHide(this)">
                   <span>필수 입력 항목입니다.</span>
                 </div>
@@ -114,10 +123,13 @@
   </div>
 
   <script src="js/nav.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
   <script>
     function titHide(e) {
       e.parentNode.classList.add('t-hide');
     }
+    autosize($("textArea"));
   </script>
 </body>
 </html>

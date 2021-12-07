@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="css/style-pc.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Aile Company</title>
+  <style>
+    ::-moz-selection {
+      color: #007481;
+    }
+    ::selection {
+      color: #007481;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -318,6 +327,16 @@
       },
     });
 
+    let list = document.querySelectorAll('.list li');
+
+    Array.prototype.forEach.call(list, function(e) {
+      e.addEventListener('click', function() {
+        list.forEach(function(e) {
+          e.classList.remove('on');
+        });
+        e.classList.add('on');
+      })
+    });
   </script>
   <script src="js/nav.js"></script>
 </body>

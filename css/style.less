@@ -331,7 +331,7 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
             &.tit { .fs(30); .lh(30); .black; .mb(10); }
             &.txt { .fs(14); .lh(19.6); .ls(-0.01em); .light; .mb(30); }
           }
-          .info-wrap {
+          .info-wrap { .rel;
             form {
               .cont { .fs(0); .tl; .mb(23); .rel;
                 p, input, textarea { .fs(14); .lh(18.2); .ls(-0.01em); .medium; color:#868686; .-a; .-b(#868686); .ib; .vam; .mb(6); .pb(6);
@@ -362,8 +362,10 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
               input { .hide; }
               s { .fs(14); .lh(18.2); .ls(-0.01em); .medium; .ib; .vam; .ml(10); }
             }
-            .submit { .fs(14); .medium; .ls(-0.01em); .p(10,24); .-box; .tc; .-a(#000); .br(19); .mt(30); }
-            .agree-chk { .fs(14); .f-col; .black; .w(90%); .tc; .p(15,0); .-box; .br(10); .bgc(#000); opacity: 0; .nowrap; .abs; .lb(50%,-123); .ml(-45%); transition: opacity 0.2s; }
+            .submit { .fs(14); .medium; .ls(-0.01em); .p(10,24); .-box; .tc; .-a(#000); .br(19); .mt(30); z-index: 1;
+              &.on { color:#fff; .bgc(#000); }
+            }
+            .agree-chk { .fs(14); .f-col; .black; .wf; .tc; .p(15,0); .-box; .br(10); .bgc(#000); opacity: 0; .nowrap; .abs; .lb; visibility: hidden; transition: opacity 0.2s; }
             &.kr-info {
               form .cont {
                 &.cont1 s { .l(30); }
@@ -373,7 +375,7 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
             }
             &.chk-agree {
               .submit { opacity: 0; }
-              .agree-chk { opacity: 0.8; }
+              .agree-chk { visibility: visible; opacity: 0.8; }
             }
           }
           .co-info { .mt(40); .tl;
@@ -395,7 +397,7 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
                 &.txt { .fs(16); .lh(20.8); .ls(-0.01em); .light; .mt(10); }
               }
             }
-            .down { .mt(250); }
+            .down { .mt(210); }
             .dim { .f; .abs; .lt; .bgc(#000); opacity: 0.8; z-index: 1;}
           }
           section { .p(58,20,0);

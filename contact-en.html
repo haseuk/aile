@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-pc.css">
   <title>Aile Company</title>
+  <style>
+    ::-moz-selection {
+      color: #007481;
+    }
+    ::selection {
+      color: #007481;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -120,6 +129,11 @@
       e.parentNode.classList.add('t-hide');
     }
     autosize($("textArea"));
+
+    let subMit = document.querySelector('.submit');
+    subMit.addEventListener('click', function() {
+      subMit.classList.add('on');
+    })
   </script>
 </body>
 </html>

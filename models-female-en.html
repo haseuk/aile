@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="css/style-pc.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Aile Company</title>
+  <style>
+    ::-moz-selection {
+      color: #007481;
+    }
+    ::selection {
+      color: #007481;
+    }
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -91,42 +100,42 @@
           <p class="txt">Our female models are fearless, adventurous, and<br class="web"> sophisticated, ready to take on any challenge upon them.</p>
           <ul class="list">
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('kangsy')">
                 <img src="img/mo/model-191.png" alt="" class="mo">
                 <img src="img/pc/model-63.png" alt="" class="web">
                 <p class="name">KANG SO YOUNG</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('parkhh')">
                 <img src="img/mo/model-192.png" alt="" class="mo">
                 <img src="img/pc/model-64.png" alt="" class="web">
                 <p class="name">PARK HEE HYUN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('choiar')">
                 <img src="img/mo/model-193.png" alt="" class="mo">
                 <img src="img/pc/model-65.png" alt="" class="web">
                 <p class="name">CHOI ARA</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('jungsh')">
                 <img src="img/mo/model-194.png" alt="" class="mo">
                 <img src="img/pc/model-66.png" alt="" class="web">
                 <p class="name">JUNG SO HYUN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('hyoi')">
                 <img src="img/mo/model-195.png" alt="" class="mo">
                 <img src="img/pc/model-67.png" alt="" class="web">
                 <p class="name">HYO IM</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('hwangjm')">
                 <img src="img/mo/model-196.png" alt="" class="mo">
                 <img src="img/pc/model-68.png" alt="" class="web">
                 <p class="name">HWANG JI MIN</p>
@@ -255,10 +264,15 @@
       e.addEventListener('click', function() {
         list.forEach(function(e) {
           e.classList.remove('on');
+
         });
         e.classList.add('on');
       })
     });
+
+    function goDetail(v) {
+      location.href = 'models-depth3-en-test.html?' + v;
+    }
   </script>
   <script src="js/nav.js"></script>
 </body>

@@ -956,6 +956,9 @@ html {
     font-weight: 300;
     margin-bottom: 8.33333333vw;
   }
+  .container .wrap article .contact .info-wrap {
+    position: relative;
+  }
   .container .wrap article .contact .info-wrap form .cont {
     font-size: 0vw;
     text-align: left;
@@ -1093,12 +1096,17 @@ html {
     border: 1px solid #000;
     border-radius: 5.27777778vw;
     margin-top: 8.33333333vw;
+    z-index: 1;
+  }
+  .container .wrap article .contact .info-wrap .submit.on {
+    color: #fff;
+    background-color: #000;
   }
   .container .wrap article .contact .info-wrap .agree-chk {
     font-size: 3.88888889vw;
     color: #fff;
     font-weight: 800;
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding-top: 4.16666667vw;
     padding-right: 0vw;
@@ -1110,11 +1118,11 @@ html {
     opacity: 0;
     white-space: nowrap;
     position: absolute;
-    left: 50%;
-    bottom: -34.16666667vw;
+    left: 0vw;
+    bottom: 0vw;
     right: auto;
     top: auto;
-    margin-left: -45%;
+    visibility: hidden;
     transition: opacity 0.2s;
   }
   .container .wrap article .contact .info-wrap.kr-info form .cont.cont1 s {
@@ -1130,6 +1138,7 @@ html {
     opacity: 0;
   }
   .container .wrap article .contact .info-wrap.chk-agree .agree-chk {
+    visibility: visible;
     opacity: 0.8;
   }
   .container .wrap article .contact .co-info {
@@ -1193,7 +1202,7 @@ html {
     margin-top: 2.77777778vw;
   }
   .container .wrap article.xr .visual .down {
-    margin-top: 69.44444444vw;
+    margin-top: 58.33333333vw;
   }
   .container .wrap article.xr .visual .dim {
     width: 100%;
