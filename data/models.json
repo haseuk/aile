@@ -8,7 +8,8 @@
       "waist": "3-size 32-24-34 inch",
       "shoes": "260mm",
       "vlink": "https://vimeo.com/252651829",
-      "insta": "https://www.instagram.com/iamsoyoung33/"
+      "insta": "https://www.instagram.com/iamsoyoung33/",
+      "photo": 212
     },
     "parkhh":
     {
@@ -18,7 +19,30 @@
       "waist": "3-size 32-24-34 inch",
       "shoes": "260mm",
       "vlink": "https://www.youtube.com/watch?v=cRdfYXZ0aIM",
-      "insta": "https://www.instagram.com/kikikihyun/"
+      "insta": "https://www.instagram.com/kikikihyun/",
+      "photo": 65
+    },
+    "choiar":
+    {
+      "name": "CHOI ARA",
+      "birth": 93,
+      "height": "178cm",
+      "waist": "3-size 32-24-35 inch",
+      "shoes": "255mm",
+      "vlink": "https://www.youtube.com/watch?v=kY9y8pRW7Zw",
+      "insta": "https://www.instagram.com/araraach/",
+      "photo": 265
+    },
+    "jungsh":
+    {
+      "name": "JUNG SO HYUN",
+      "birth": 95,
+      "height": "179cm",
+      "waist": "3-size 32-24-34 inch",
+      "shoes": "255mm",
+      "vlink": "https://www.youtube.com/watch?v=UqafQNksYq8",
+      "insta": "https://www.instagram.com/cochon_j/",
+      "photo": 219
     }
   }
 ]
