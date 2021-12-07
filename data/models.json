@@ -43,6 +43,39 @@
       "vlink": "https://www.youtube.com/watch?v=UqafQNksYq8",
       "insta": "https://www.instagram.com/cochon_j/",
       "photo": 219
+    },
+    "hyoi":
+    {
+      "name": "HYO IM",
+      "birth": 91,
+      "height": "177cm",
+      "waist": "3-size 32-24-35 inch",
+      "shoes": "245mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/jhyommm/",
+      "photo": 81
+    },
+    "hwangjm":
+    {
+      "name": "HWANG JI MIN",
+      "birth": 91,
+      "height": "166cm",
+      "waist": "3-size 32-23-34 inch",
+      "shoes": "235mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/gttlv/",
+      "photo": 72
+    },
+    "megu":
+    {
+      "name": "MEGU",
+      "birth": 96,
+      "height": "173cm",
+      "waist": "3-size 31-24-35 inch",
+      "shoes": "240mm",
+      "vlink": "https://youtu.be/VBBis5dVhBM?list=TLGGHQMPSSwR9WowNjEyMjAyMQ",
+      "insta": "https://www.instagram.com/__chomegyu__/",
+      "photo": 107
     }
   }
 ]
