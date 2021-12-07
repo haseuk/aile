@@ -109,6 +109,39 @@
       "vlink": "https://youtu.be/qW_TMyvmimA",
       "insta": "https://www.instagram.com/_ssomkim/",
       "photo": 93
+    },
+    "kimjh":
+    {
+      "name": "KIM JU HYANG",
+      "birth": 98,
+      "height": "171cm",
+      "waist": "3-size 32-24-35 inch",
+      "shoes": "250mm",
+      "vlink": "https://www.youtube.com/watch?v=BMFM0Ey1oRo",
+      "insta": "https://www.instagram.com/perfumer__/",
+      "photo": 221
+    },
+    "kimju":
+    {
+      "name": "KIM JU HYANG",
+      "birth": 98,
+      "height": "175cm",
+      "waist": "3-size 33-23-34 inch",
+      "shoes": "240mm",
+      "vlink": "https://player.vimeo.com/video/242871834?h=e6b59f069f",
+      "insta": "",
+      "photo": 49
+    },
+    "seongm":
+    {
+      "name": "SEONG MIN",
+      "birth": 96,
+      "height": "178cm",
+      "waist": "3-size 32-24-35 inch",
+      "shoes": "255mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/joyseongmin/",
+      "photo": 46
     }
   }
 ]
