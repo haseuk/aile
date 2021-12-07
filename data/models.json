@@ -142,6 +142,39 @@
       "vlink": "",
       "insta": "https://www.instagram.com/joyseongmin/",
       "photo": 46
+    },
+    "leena":
+    {
+      "name": "LEE NOAH",
+      "birth": 96,
+      "height": "176cm",
+      "waist": "3-size 32-23-34 inch",
+      "shoes": "250mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/noa_half/",
+      "photo": 46
+    },
+    "junghr":
+    {
+      "name": "JUNG HOE RIN",
+      "birth": 97,
+      "height": "165cm",
+      "waist": "3-size 31-21-34 inch",
+      "shoes": "235mm",
+      "vlink": "",
+      "insta": "",
+      "photo": 123
+    },
+    "chloe":
+    {
+      "name": "CHLOE",
+      "birth": 99,
+      "height": "176cm",
+      "waist": "3-size 32-24-34 inch",
+      "shoes": "260mm",
+      "vlink": "",
+      "insta": "",
+      "photo": 52
     }
   }
 ]
