@@ -20,7 +20,7 @@
       "shoes": "260mm",
       "vlink": "https://www.youtube.com/watch?v=cRdfYXZ0aIM",
       "insta": "https://www.instagram.com/kikikihyun/",
-      "photo": 65
+      "photo": 64
     },
     "choiar":
     {
@@ -31,7 +31,7 @@
       "shoes": "255mm",
       "vlink": "https://www.youtube.com/watch?v=kY9y8pRW7Zw",
       "insta": "https://www.instagram.com/araraach/",
-      "photo": 265
+      "photo": 261
     },
     "jungsh":
     {
@@ -53,7 +53,7 @@
       "shoes": "245mm",
       "vlink": "",
       "insta": "https://www.instagram.com/jhyommm/",
-      "photo": 81
+      "photo": 80
     },
     "hwangjm":
     {
@@ -64,7 +64,7 @@
       "shoes": "235mm",
       "vlink": "",
       "insta": "https://www.instagram.com/gttlv/",
-      "photo": 72
+      "photo": 71
     },
     "megu":
     {
@@ -108,7 +108,7 @@
       "shoes": "240mm",
       "vlink": "https://youtu.be/qW_TMyvmimA",
       "insta": "https://www.instagram.com/_ssomkim/",
-      "photo": 93
+      "photo": 92
     },
     "kimjh":
     {
@@ -152,7 +152,7 @@
       "shoes": "250mm",
       "vlink": "",
       "insta": "https://www.instagram.com/noa_half/",
-      "photo": 46
+      "photo": 66
     },
     "junghr":
     {
@@ -174,7 +174,40 @@
       "shoes": "260mm",
       "vlink": "",
       "insta": "",
-      "photo": 52
+      "photo": 51
+    },
+    "sod":
+    {
+      "name": "SO DAM",
+      "birth": 94,
+      "height": "170cm",
+      "waist": "3-size 31-24-33 inch",
+      "shoes": "245mm",
+      "vlink": "https://vimeo.com/391166949",
+      "insta": "https://www.instagram.com/damikimi/",
+      "photo": 34
+    },
+    "mir":
+    {
+      "name": "SO DAM",
+      "birth": 93,
+      "height": "167cm",
+      "waist": "3-size 30-23-34 inch",
+      "shoes": "235mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/miirriimm/",
+      "photo": 59
+    },
+    "ahnjw":
+    {
+      "name": "AHN JI WOO",
+      "birth": "02",
+      "height": "174cm",
+      "waist": "3-size 31-23-34 inch",
+      "shoes": "250mm",
+      "vlink": "",
+      "insta": "https://www.instagram.com/_christine5603/",
+      "photo": 62
     }
   }
 ]

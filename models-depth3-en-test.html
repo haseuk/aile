@@ -80,12 +80,12 @@
 
           <div class="swiper mySwiper visual-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="img/mo/kwj-visu-118.png" alt=""></div>
-              <div class="swiper-slide"><img src="img/mo/kwj-visu-118.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/pc/" alt=""></div>
+              <div class="swiper-slide"><img src="img/pc/" alt=""></div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <a href="videos-en.html" class="go-btn video-go">VIDEOS <img src="img/mo/ico-go.svg" alt=""></a>
+          <a href="" class="go-btn video-go">VIDEOS <img src="img/mo/ico-go.svg" alt=""></a>
           <a href="" class="go-btn ins-go">INSTAGRAM <img src="img/mo/ico-go.svg" alt=""></a>
         </section>
         <section class="photo-book">
@@ -116,13 +116,17 @@
         el: ".swiper-pagination",
       },
     });
+
   </script>
   <script src="js/nav.js"></script>
   <script>
     temp = location.href.split('?');
     history.replaceState(temp, '', 'models-depth3-en-test.html');
-    modelName = temp[1];
-
+    let modelName;
+    if(temp.length === 2) {
+      modelName = temp[1];
+      localStorage.setItem('nm', modelName)
+    }
 
     let xhttp = new XMLHttpRequest();
 
@@ -134,64 +138,95 @@
     xhttp.open("GET", "./data/models.json", true);
     xhttp.send();
 
-    let jsonData
-    function jsonfunc(jtxt) {
-      jsonData = JSON.parse(jtxt);
+    let jsonData;
+    function jsonfunc(v) {
+      jsonData = JSON.parse(v);
       profile(jsonData[0]);
     }
 
     let profName = document.querySelector('.md-name');
+    let profBirth = document.querySelector('.birth');
+    let profHeight = document.querySelector('.height');
+    let profWaist = document.querySelector('.waist');
+    let profShoes = document.querySelector('.shoes');
+    let profVideoLink = document.querySelector('.video-go');
+    let profInsLink = document.querySelector('.ins-go');
+    let nm = localStorage.getItem('nm');
     function profile(v) {
-      profName.innerHTML = v.kwj.name;
-      pic(v.kwj.photo);
+      const {insta, name, shoes, birth, height, photo, vlink, waist} = v[nm];
+      profName.innerHTML = name;
+      profBirth.innerHTML = 'Birth ' + birth;
+      profHeight.innerHTML = 'Height ' + height;
+      profWaist.innerHTML = 'Waist ' + waist;
+      profShoes.innerHTML = 'Shoes ' + shoes;
+      profVideoLink.href = vlink;
+      profInsLink.href = insta;
+      pic(photo);
     }
 
     let ul = document.querySelector('.photo-book ul');
     let el = '';
     function pic(v) {
-      for (let i = 0; i < v; i++) {
-        el = el + '<li><a><img src="img/mo/kwj-12'+ i +'.png" alt="" class="mo"><img src="img/pc/kwj-12' + i +'.png" alt="" class="web"></a></li>'
+      for (let i = 1; i < v; i++) {
+        el = el + '<li><a><img src="img/pc/'+ nm + '/'+ nm + '-' + i +'.png" alt="" class="mo"><img src="img/pc/'+ nm + '/'+ nm + '-' + i +'.png" alt="" class="web"></a></li>'
       }
       ul.innerHTML = el;
     }
 
-    let photoClick = document.querySelectorAll('.photo-book a');
-    let photoList = document.querySelectorAll('.photo-book li');
-    let imgSrc;
-    photoClick.forEach(function(item) {
-      item.addEventListener('click', function(e) {
-        let winWidth = window.innerWidth;
-        if(winWidth > 800) {
-          imgSrc = e.target.children[1].src;
-          return changeImg(imgSrc);
+    let visualImg = document.querySelectorAll('.visual-swiper .swiper-slide');
+    let imgEl = '';
+    Array.prototype.forEach.call(visualImg, function(e, idx) {
+      if(idx === 0) {
+        e.children[0].src = 'img/pc/' + nm + '/'+ nm + '-' + 2 +'.png';
+      } else if (idx === 1) {
+        e.children[0].src = 'img/pc/' + nm + '/'+ nm + '-' + 1 +'.png';
+      } else if (idx === 2) {
+        e.children[0].src = 'img/pc/' + nm + '/'+ nm + '-' + 2 +'.png';
+      } else {
+        e.children[0].src = 'img/pc/' + nm + '/'+ nm + '-' + 1 +'.png';
+      }
+    });
 
-        } else {
-          for (let i = 0; i < photoList.length; i++) {
-            photoList[i].classList.remove('on');
-          }
-          e.currentTarget.parentNode.classList.add('on');
-          imgSrc = e.target.src;
-          return changeImg(imgSrc);
+    (function() {
+      setTimeout(function() {
+        let photoClick = document.querySelectorAll('.photo-book a');
+        let photoList = document.querySelectorAll('.photo-book li');
+        let imgSrc;
+        photoClick.forEach(function(item) {
+          item.addEventListener('click', function(e) {
+            let winWidth = window.innerWidth;
+            if(winWidth > 800) {
+              imgSrc = e.target.children[1].src;
+              return changeImg(imgSrc);
+            } else {
+              for (let i = 0; i < photoList.length; i++) {
+                photoList[i].classList.remove('on');
+              }
+              e.currentTarget.parentNode.classList.add('on');
+              imgSrc = e.target.src;
+              return changeImg(imgSrc);
+            }
+          });
+        });
+
+        let popup = document.querySelector('.popup');
+        let popImg = document.querySelector('.popup-inner img')
+        function changeImg(v) {
+          popImg.src = v;
+          popup.style.display = 'block';
+          setTimeout(function() {
+            popup.style.opacity = '1';
+          }, 100);
         }
-      });
-    });
-
-    let popup = document.querySelector('.popup');
-    let popImg = document.querySelector('.popup-inner img')
-    function changeImg(v) {
-      popImg.src = v;
-      popup.style.display = 'block';
-      setTimeout(function() {
-        popup.style.opacity = '1';
-      }, 100);
-    }
-    popup.addEventListener('click', function() {
-      popImg.src = '';
-      popup.style.opacity = '0';
-      setTimeout(function() {
-        popup.style.display = 'none';
-      }, 500);
-    });
+        popup.addEventListener('click', function() {
+          popImg.src = '';
+          popup.style.opacity = '0';
+          setTimeout(function() {
+            popup.style.display = 'none';
+          }, 500);
+        });
+      },500)
+    }());
   </script>
 </body>
 </html>
