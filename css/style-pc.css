@@ -1796,7 +1796,7 @@ html {
     transform: translate(-50%, -50%);
   }
   .container .wrap .popup .popup-inner img {
-    width: 31.51041667vw;
+    width: auto;
     height: auto;
   }
   @-webkit-keyframes marquee {
