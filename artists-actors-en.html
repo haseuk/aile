@@ -82,56 +82,56 @@
           <p class="txt">Our models have expanded their proffesional field to the world<br class="web"> of acting, and are meeting the public via various artworks.</p>
           <ul class="list">
             <li>
-              <a href="artists-depth3-en-vr02.html">
+              <a  onclick="goDetail('choiar')">
                 <img src="img/mo/actor-1.png" alt="" class="mo">
                 <img src="img/pc/actor-63.png" alt="" class="web">
                 <p class="name">CHOI ARA</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a onclick="goDetail('hyoi')">
                 <img src="img/mo/actor-2.png" alt="" class="mo">
                 <img src="img/pc/actor-64.png" alt="" class="web">
                 <p class="name">HYO IM</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a onclick="goDetail('chajy')">
                 <img src="img/mo/actor-3.png" alt="" class="mo">
                 <img src="img/pc/actor-65.png" alt="" class="web">
                 <p class="name">CHA JU YEONG</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a>
                 <img src="img/mo/actor-4.png" alt="" class="mo">
                 <img src="img/pc/actor-66.png" alt="" class="web">
                 <p class="name">KIM DA SOM</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a onclick="goDetail('junghj')">
                 <img src="img/mo/actor-5.png" alt="" class="mo">
                 <img src="img/pc/actor-67.png" alt="" class="web">
                 <p class="name">JUNG HA JOON</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a onclick="goDetail('kimsm')">
                 <img src="img/mo/actor-6.png" alt="" class="mo">
                 <img src="img/pc/actor-68.png" alt="" class="web">
                 <p class="name">KIM SUN MIN</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a>
                 <img src="img/mo/actor-7.png" alt="" class="mo">
                 <img src="img/pc/actor-69.png" alt="" class="web">
                 <p class="name">LIM JI SEOB</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-en.html">
+              <a>
                 <img src="img/mo/actor-8.png" alt="" class="mo">
                 <img src="img/pc/actor-70.png" alt="" class="web">
                 <p class="name">KIM YOUNG JUN</p>
@@ -161,6 +161,10 @@
         e.classList.add('on');
       })
     });
+
+    function goDetail(v) {
+      location.href = 'artists-depth3-en.html?' + v;
+    }
   </script>
   <script src="js/nav.js"></script>
 </body>

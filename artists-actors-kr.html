@@ -83,56 +83,56 @@
           <p class="txt">우리의 모델들은 자신들의 전문 분야를 연기의 세계로까지 확장하였으며,<br class="web"> 대중을 다양한 작품으로 만나뵙고 있습니다.</p>
           <ul class="list">
             <li>
-              <a href="artists-depth3-kr-vr02.html">
+              <a  onclick="goDetail('choiar')">
                 <img src="img/mo/actor-1.png" alt="" class="mo">
                 <img src="img/pc/actor-63.png" alt="" class="web">
                 <p class="name">CHOI ARA  최아라</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a onclick="goDetail('hyoi')">
                 <img src="img/mo/actor-2.png" alt="" class="mo">
                 <img src="img/pc/actor-64.png" alt="" class="web">
                 <p class="name">HYO IM  효임</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a onclick="goDetail('chajy')">
                 <img src="img/mo/actor-3.png" alt="" class="mo">
                 <img src="img/pc/actor-65.png" alt="" class="web">
                 <p class="name">CHA JU YEONG  차주영</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a>
                 <img src="img/mo/actor-4.png" alt="" class="mo">
                 <img src="img/pc/actor-66.png" alt="" class="web">
                 <p class="name">KIM DA SOM  김다솜</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a onclick="goDetail('junghj')">
                 <img src="img/mo/actor-5.png" alt="" class="mo">
                 <img src="img/pc/actor-67.png" alt="" class="web">
                 <p class="name">JUNG HA JOON  정하준</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a onclick="goDetail('kimsm')">
                 <img src="img/mo/actor-6.png" alt="" class="mo">
                 <img src="img/pc/actor-68.png" alt="" class="web">
                 <p class="name">KIM SUN MIN  김선민</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a>
                 <img src="img/mo/actor-7.png" alt="" class="mo">
                 <img src="img/pc/actor-69.png" alt="" class="web">
                 <p class="name">LIM JI SEOB  임지섭</p>
               </a>
             </li>
             <li>
-              <a href="artists-depth3-kr.html">
+              <a>
                 <img src="img/mo/actor-8.png" alt="" class="mo">
                 <img src="img/pc/actor-70.png" alt="" class="web">
                 <p class="name">KIM YOUNG JUN  김영준</p>
@@ -162,6 +162,10 @@
         e.classList.add('on');
       })
     });
+
+    function goDetail(v) {
+      location.href = 'artists-depth3-kr.html?' + v;
+    }
   </script>
   <script src="js/nav.js"></script>
 </body>

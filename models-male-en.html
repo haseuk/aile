@@ -100,65 +100,65 @@
           <p class="txt">The male models of Aile are known for their bold and<br class="web"> audacious creativity when it comes to representing a brand.</p>
           <ul class="list">
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('kimwj')">
                 <img src="img/mo/model-210.png" alt="" class="mo">
                 <img src="img/pc/model-82.png" alt="" class="web">
                 <p class="name">KIM WON JOONG</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('junghj')">
                 <img src="img/mo/model-211.png" alt="" class="mo">
-                <img src="img/pc/model-83.png" alt="" class="web">
+                <img src="img/pc/model-85.png" alt="" class="web">
                 <p class="name">JUNG HA JOON</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('limjs')">
                 <img src="img/mo/model-212.png" alt="" class="mo">
-                <img src="img/pc/model-84.png" alt="" class="web">
+                <img src="img/pc/model-88.png" alt="" class="web">
                 <p class="name">LIM JI SEOB</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('bongk')">
                 <img src="img/mo/model-213.png" alt="" class="mo">
-                <img src="img/pc/model-85.png" alt="" class="web">
+                <img src="img/pc/model-84.png" alt="" class="web">
                 <p class="name">BONG KIM</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('taem')">
                 <img src="img/mo/model-214.png" alt="" class="mo">
-                <img src="img/pc/model-86.png" alt="" class="web">
+                <img src="img/pc/model-87.png" alt="" class="web">
                 <p class="name">TAE MEEN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('leetg')">
                 <img src="img/mo/model-215.png" alt="" class="mo">
-                <img src="img/pc/model-87.png" alt="" class="web">
+                <img src="img/pc/model-90.png" alt="" class="web">
                 <p class="name">LEE TAE GYUN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('songhg')">
                 <img src="img/mo/model-216.png" alt="" class="mo">
-                <img src="img/pc/model-88.png" alt="" class="web">
+                <img src="img/pc/model-83.png" alt="" class="web">
                 <p class="name">SONG HYEON GEUN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('kimsm')">
                 <img src="img/mo/model-217.png" alt="" class="mo">
-                <img src="img/pc/model-89.png" alt="" class="web">
+                <img src="img/pc/model-86.png" alt="" class="web">
                 <p class="name">KIM SUN MIN</p>
               </a>
             </li>
             <li>
-              <a href="models-depth3-en.html">
+              <a onclick="goDetail('kimyj')">
                 <img src="img/mo/model-218.png" alt="" class="mo">
-                <img src="img/pc/model-90.png" alt="" class="web">
+                <img src="img/pc/model-89.png" alt="" class="web">
                 <p class="name">KIM YOUNG JUN</p>
               </a>
             </li>
@@ -198,6 +198,10 @@
         e.classList.add('on');
       })
     });
+
+    function goDetail(v) {
+      location.href = 'models-depth3-en.html?' + v;
+    }
   </script>
   <script src="js/nav.js"></script>
 </body>
